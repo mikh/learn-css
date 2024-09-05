@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import "./App.css";
 import Basic from "./Basic";
+import Direction from "./Direction";
 
 function App() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -13,6 +13,9 @@ function App() {
         break;
       case "basic":
         setCssConfig(<Basic></Basic>);
+        break;
+      case "directions":
+        setCssConfig(<Direction></Direction>);
         break;
       default:
         console.log(`Unknown value ${e.target.value}`);
@@ -26,6 +29,7 @@ function App() {
         <select onChange={handleCssConfigChange}>
           <option value=""></option>
           <option value="basic">Basic</option>
+          <option value="directions">Directions</option>
         </select>
         {cssConfig}
       </div>
