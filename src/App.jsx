@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import Basic from "./Basic";
 import Direction from "./Direction";
+import Wrap from "./Wrap";
+import Justify from "./Justify";
 
 function App() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -17,6 +19,12 @@ function App() {
       case "directions":
         setCssConfig(<Direction></Direction>);
         break;
+      case "wrap":
+        setCssConfig(<Wrap></Wrap>);
+        break;
+      case "justify":
+        setCssConfig(<Justify></Justify>);
+        break;
       default:
         console.log(`Unknown value ${e.target.value}`);
     }
@@ -30,6 +38,8 @@ function App() {
           <option value=""></option>
           <option value="basic">Basic</option>
           <option value="directions">Directions</option>
+          <option value="wrap">Wrap</option>
+          <option value="justify">Justify</option>
         </select>
         {cssConfig}
       </div>
