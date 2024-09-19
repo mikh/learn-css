@@ -5,6 +5,7 @@ import Direction from "./Direction";
 import Wrap from "./Wrap";
 import Justify from "./Justify";
 import Align from "./Align";
+import AlignContent from "./AlignContent";
 
 function App() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -29,6 +30,9 @@ function App() {
       case "align":
         setCssConfig(<Align></Align>);
         break;
+      case "align-content":
+        setCssConfig(<AlignContent></AlignContent>);
+        break;
       default:
         console.log(`Unknown value ${e.target.value}`);
     }
@@ -45,6 +49,7 @@ function App() {
           <option value="wrap">Wrap</option>
           <option value="justify">Justify</option>
           <option value="align">Align</option>
+          <option value="align-content">Align Content</option>
         </select>
         {cssConfig}
       </div>
