@@ -42,7 +42,7 @@ export default function AlignContent() {
     return (
       <div
         className={`flex flex-row border-2 flex-wrap ${align_content_class}`}
-        style={{ width: "800px" }}
+        style={{ width: "800px", height: "800px" }}
       >
         {elements}
       </div>
@@ -74,5 +74,3 @@ export default function AlignContent() {
     </>
   );
 }
-
-// TODO: FINISH

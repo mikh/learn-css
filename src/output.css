@@ -696,6 +696,10 @@ video {
   width: 24rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .flex-row {
   flex-direction: row;
 }
