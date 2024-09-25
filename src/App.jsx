@@ -7,6 +7,7 @@ import Justify from "./Justify";
 import Align from "./Align";
 import AlignContent from "./AlignContent";
 import Gap from "./Gap";
+import Order from "./order";
 
 function App() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -37,6 +38,9 @@ function App() {
       case "gap":
         setCssConfig(<Gap></Gap>);
         break;
+      case "order":
+        setCssConfig(<Order></Order>);
+        break;
       default:
         console.log(`Unknown value ${e.target.value}`);
     }
@@ -55,6 +59,7 @@ function App() {
           <option value="align">Align</option>
           <option value="align-content">Align Content</option>
           <option value="gap">Gap</option>
+          <option value="order">Order</option>
         </select>
         {cssConfig}
       </div>
