@@ -7,9 +7,10 @@ import Justify from "./Justify";
 import Align from "./Align";
 import AlignContent from "./AlignContent";
 import Gap from "./Gap";
-import Order from "./order";
+import Order from "./Order";
 import Grow from "./Grow";
 import Shrink from "./Shrink";
+import Basis from "./Basis";
 
 function App() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -49,6 +50,9 @@ function App() {
       case "shrink":
         setCssConfig(<Shrink></Shrink>);
         break;
+      case "basis":
+        setCssConfig(<Basis></Basis>);
+        break;
       default:
         console.log(`Unknown value ${e.target.value}`);
     }
@@ -70,6 +74,7 @@ function App() {
           <option value="order">Order</option>
           <option value="grow">Grow</option>
           <option value="shrink">Shrink</option>
+          <option value="basis">Basis</option>
         </select>
         {cssConfig}
       </div>
