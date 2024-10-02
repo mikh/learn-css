@@ -8,6 +8,7 @@ import Align from "./Align";
 import AlignContent from "./AlignContent";
 import Gap from "./Gap";
 import Order from "./order";
+import Grow from "./Grow";
 
 function App() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -41,6 +42,9 @@ function App() {
       case "order":
         setCssConfig(<Order></Order>);
         break;
+      case "grow":
+        setCssConfig(<Grow></Grow>);
+        break;
       default:
         console.log(`Unknown value ${e.target.value}`);
     }
@@ -60,6 +64,7 @@ function App() {
           <option value="align-content">Align Content</option>
           <option value="gap">Gap</option>
           <option value="order">Order</option>
+          <option value="grow">Grow</option>
         </select>
         {cssConfig}
       </div>
