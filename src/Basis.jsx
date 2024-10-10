@@ -8,9 +8,7 @@ export default function Basis() {
     "bg-orange-600",
   ];
 
-  // TODO: Figure out basis
-
-  const basis_values = ["auto", "auto", "auto", "auto", "auto", "auto"];
+  const basis_values = ["auto", "0", "100px", "200px", "content", "20%"];
 
   const elements = colors.map((bg_color, index) => {
     return (
@@ -19,14 +17,16 @@ export default function Basis() {
         className={`${bg_color} w-24 h-24 border-solid border rounded-md border-black flex justify-center items-center text-3xl`}
         style={{ flexBasis: basis_values[index] }}
       >
-        {index + 1}
+        {basis_values[index]}
       </div>
     );
   });
 
   return (
     <>
-      <div className="flex border-2 w-96">{elements}</div>
+      <div className="flex border-2" style={{ width: "1000px" }}>
+        {elements}
+      </div>
     </>
   );
 }
