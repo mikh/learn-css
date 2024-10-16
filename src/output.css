@@ -676,6 +676,10 @@ video {
   width: 10rem;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .w-48 {
   width: 12rem;
 }
@@ -698,10 +702,6 @@ video {
 
 .w-96 {
   width: 24rem;
-}
-
-.w-44 {
-  width: 11rem;
 }
 
 .shrink {
