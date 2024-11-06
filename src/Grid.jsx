@@ -1,5 +1,7 @@
 import GridBasic from "./GridBasic";
 import { useState } from "react";
+import GridDisplay from "./GridDisplay";
+import GridTemplate from "./GridTemplate";
 
 export default function Grid() {
   const [cssConfig, setCssConfig] = useState(null);
@@ -7,6 +9,8 @@ export default function Grid() {
   const cssConfigs = {
     "": null,
     basic: <GridBasic></GridBasic>,
+    display: <GridDisplay></GridDisplay>,
+    template: <GridTemplate></GridTemplate>,
   };
 
   function handleCssConfigChange(e) {
