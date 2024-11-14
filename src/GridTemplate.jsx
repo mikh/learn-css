@@ -29,7 +29,6 @@ function generateSection(name, style) {
   );
 }
 
-//TODO: grid-template-rows is not correct
 export default function GridTemplate() {
   return (
     <>
@@ -55,22 +54,26 @@ export default function GridTemplate() {
       })}
       {generateSection("grid-template-rows-2fr", {
         gridTemplateRows: "1fr 1fr",
+        gridTemplateColumns: "auto auto auto auto auto",
         gap: "4px",
         height: "100px",
-        width: "200px",
+        //width: "200px",
       })}
       {generateSection("grid-template-rows-minmax", {
         gridTemplateRows: "minmax(10px, 1fr) 3fr",
+        gridTemplateColumns: "auto auto auto auto auto",
         gap: "4px",
         height: "100px",
       })}
       {generateSection("grid-template-rows-repeat", {
         gridTemplateRows: "repeat(4, 1fr)",
+        gridTemplateColumns: "auto auto ",
         gap: "4px",
-        height: "100px",
+        height: "200px",
       })}
       {generateSection("grid-template-rows-auto", {
         gridTemplateRows: "10px auto 30px 1fr",
+        gridTemplateColumns: "auto auto ",
         gap: "4px",
         height: "100px",
       })}
