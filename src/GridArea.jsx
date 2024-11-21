@@ -13,6 +13,8 @@ export default function GridArea() {
              "side side . ." 
              ". down down down" 
              ". footer footer footer"`,
+          columnGap: "10px",
+          rowGap: "20px",
         }}
       >
         <div
